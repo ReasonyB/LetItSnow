@@ -12,4 +12,4 @@
 Name Rule
 ----- 
 LetItSnow_0000_OperationSR.docs(.pptx,.xlsx)    
-0000: 기획서 
+0000: 기획서 종류
