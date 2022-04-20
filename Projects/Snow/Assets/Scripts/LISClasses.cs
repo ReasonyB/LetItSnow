@@ -25,4 +25,22 @@ namespace LISClasses
             Minute = now.Second;
         }
     }
+
+    public class Food{
+        public string name;
+        public int neededlevel;
+        public int cost;
+        public int heal;
+        
+        public Food(string name,int neededlevel,int cost,int heal){
+            this.name = name;
+            this.neededlevel = neededlevel;
+            this.cost = cost;
+            this.heal = heal;
+        }
+    }
+
+    public class Gold{
+
+    }
 }

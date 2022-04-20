@@ -25,20 +25,26 @@ public class ThemeButton : MonoBehaviour
     }
 
     public void OnClickSeasonTheme(int i){
-        curPurchaseTheme = i;
-        PPurchase.SetActive(true);
+        if(!seasonAvailable[i]){
+            curPurchaseTheme = i;
+            PPurchase.SetActive(true);
+        }
+        else{
+            DataManager.Instance.Theme = i;
+            SceneManager.LoadScene("Main");
+        }
     }
     
     public void OnClickYesSub(){
         int i = curPurchaseTheme;
-        
-        PPurchase.SetActive(false);
-        seasonAvailable[i] = true;
-        ResetSeaonButton(i);
-        
-        //구매 이후 메인씬 전환
-        BSeasons[i].GetComponent<Button>()?.onClick.RemoveAllListeners();
-        BSeasons[i].GetComponent<Button>()?.onClick.AddListener(()=>SceneManager.LoadScene("Main"));
+        if(!DataManager.Instance.Buy(i,costOfSeason[i])){
+            GetComponent<UnAvailablePurchase>()?.ShowCantPurchase();
+        }
+        else{
+            PPurchase.SetActive(false);
+            seasonAvailable[i] = true;
+            ResetSeaonButton(i);
+        }
     }
 
     public void OnClickNoSub(){
