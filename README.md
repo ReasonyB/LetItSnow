@@ -19,3 +19,5 @@ LetItSnow_0000_OperationSR.docs(.pptx,.xlsx)
 Role Jamboard
 -----
 https://jamboard.google.com/d/1P0sUDUYZSKCATl0rCycKxBbl9jl26DtpgTv_MpP-ZLU/edit?usp=sharing   
+
+22.01.11 Let it snow → Let it sweep
